@@ -1,0 +1,18 @@
+class Dog:
+    def __init__(self, name, age, breed):
+        self.name = name
+        self.age = age
+        self.breed = breed
+
+    def print_info(self):
+        print('The breed of the dog is:', self.breed)
+        print('The name of the dog is:', self.name)
+        print('The age of the dog is:', self.age)
+
+lab = Dog('Buddy', 1, 'Labrador')
+gold = Dog('Rex', 4, 'Golden Retriever')
+husky = Dog('Leo', 6, 'Husky')
+
+lab.print_info()
+gold.print_info()
+husky.print_info()

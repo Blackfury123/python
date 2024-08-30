@@ -1,0 +1,10 @@
+def reverse_string(s):
+    reversed_str = ""
+    for char in s:
+        reversed_str = char + reversed_str
+    return reversed_str
+
+input_string = input("enter the word you want to reverse : ")
+reversed_string = reverse_string(input_string)
+print("Original string:", input_string)
+print("Reversed string:", reversed_string)

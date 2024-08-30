@@ -1,0 +1,25 @@
+import random
+
+def generate_password(length=12):
+    lowercase = list('abcdefghijklmnopqrstuvwxyz')
+    uppercase = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+    digits = list('0123456789')
+    special_chars = list('!@#$%^&*()-_=+[]{}|;:,.<>?')
+
+    all_chars = lowercase + uppercase + digits + special_chars
+    
+    password = [
+        random.choice(lowercase),
+        random.choice(uppercase),
+        random.choice(digits),
+        random.choice(special_chars)
+    ]
+    
+    password += random.choices(all_chars, k=length - 4)
+    
+    random.shuffle(password)
+    
+    return ''.join(password)
+
+password = generate_password(12)
+print("Generated Password:", password)
